@@ -1,33 +1,19 @@
 
-
 const container = document.getElementById('container');
-const btn = document.getElementById('btn');
 
 
-btn.addEventListener('click', () =>{
-    const input = prompt('Enter the size');
-    
+const button = document.getElementById('btn');
 
+button.addEventListener('click', ()=>{
+    const input = prompt('enter the size')
+});
+
+
+const box = document.createElement('div');
+box.addEventListener('mouseover', ()=>{
+    box.style.background = 'orange';
 })
+box.classList.add('item')
+box.style.backgroundColor = 'purple';
 
-        for (let i = 0; i < 16 * 16; i++) {
-            const box = document.createElement('div');
-            box.classList.add('grid-item');
-
-            container.appendChild(box);
-        }
-
-        document.querySelectorAll('.grid-item').forEach(item =>{
-            item.addEventListener('mouseover', () => {
-                item.style.background = 'black';
-                // item.style.transform = 'scale(1.1)';
-                // item.style.transition = 'transform 0.3s ease';
-        })
-       
-        // item.addEventListener('mouseleave', () =>{
-            // item.style.background = '';
-            // item.style.transform = 'scale(1)';
-        // })
-    });
-
-    
+container.appendChild(box);
